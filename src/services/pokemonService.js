@@ -130,7 +130,11 @@ export const getPokemonTypes = async () => {
     }));
 };
 
-export const getPokemonByType = async (typeName, page = 1, limit = config.pagination.defaultLimit) => {
+export const getPokemonByType = async (
+  typeName,
+  page = 1,
+  limit = config.pagination.defaultLimit
+) => {
   const pokemonList = await pokemonRepository.getPokemonByType(typeName);
 
   if (!pokemonList) {
